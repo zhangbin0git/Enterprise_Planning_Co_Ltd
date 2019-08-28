@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WorkBook xmlVersion="20170720" releaseVersion="10.0.0">
+<TableDataMap>
+<TableData name="base_info_modify" class="com.fr.data.impl.DBTableData">
+<Parameters>
+<Parameter>
+<Attributes name="company_name"/>
+<O t="XMLable" class="com.fr.base.Formula">
+<Attributes>
+<![CDATA[=GETUSERDEPARTMENTS()]]></Attributes>
+</O>
+</Parameter>
+</Parameters>
+<Attributes maxMemRowCount="-1"/>
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName>
+<![CDATA[dataview_demo]]></DatabaseName>
+</Connection>
+<Query>
+<![CDATA[SELECT * FROM base_info WHERE company_name='${company_name}']]></Query>
+<PageQuery>
+<![CDATA[]]></PageQuery>
+</TableData>
+</TableDataMap>
+<ElementCaseMobileAttr>
+<ElementCaseMobileAttrProvider horizontal="1" vertical="1" zoom="true" refresh="false" isUseHTML="false" isMobileCanvasSize="false" appearRefresh="false" allowFullScreen="false"/>
+</ElementCaseMobileAttr>
+<Report class="com.fr.report.worksheet.WorkSheet" name="sheet1">
+<ReportPageAttr>
+<HR/>
+<FR/>
+<HC/>
+<FC/>
+</ReportPageAttr>
+<ColumnPrivilegeControl/>
+<RowPrivilegeControl/>
+<RowHeight defaultValue="723900">
+<![CDATA[1790700,1296000,1296000,1296000,1296000,1296000,1296000,1296000,1296000,1296000,1296000,1296000,1296000,1296000,1296000,1296000,1296000,1296000,1296000,1296000,1296000,1296000,1296000,1296000,1296000,1296000,1296000,1296000,1296000,723900]]></RowHeight>
+<ColumnWidth defaultValue="2743200">
+<![CDATA[10515600,20497800,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200]]></ColumnWidth>
+<CellElementList>
+<C c="0" r="0" cs="2" s="0">
+<O t="XMLable" class="com.fr.base.Formula">
+<Attributes>
+<![CDATA[=B3 + "基础信息"]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="0" r="1" s="1">
+<O>
+<![CDATA[序号]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="1" s="2">
+<O t="DSColumn">
+<Attributes dsName="base_info_modify" columnName="ID"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="0" r="2" s="1">
+<O>
+<![CDATA[公司名称]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="2" s="2">
+<O t="DSColumn">
+<Attributes dsName="base_info_modify" columnName="company_name"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Widget class="com.fr.form.ui.TextEditor">
+<WidgetName name="company_name"/>
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<TextAttr/>
+<Reg class="com.fr.form.ui.reg.NoneReg"/>
+<widgetValue/>
+<MobileScanCodeAttr scanCode="true"/>
+</Widget>
+<Expand dir="0"/>
+</C>
+<C c="0" r="3" s="1">
+<O>
+<![CDATA[上级公司名称]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="3" s="2">
+<O t="DSColumn">
+<Attributes dsName="base_info_modify" columnName="name_sup_com"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Widget class="com.fr.form.ui.TextEditor">
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<TextAttr/>
+<Reg class="com.fr.form.ui.reg.NoneReg"/>
+<widgetValue/>
+<MobileScanCodeAttr scanCode="true"/>
+</Widget>
+<Expand dir="0"/>
+</C>
+<C c="0" r="4" s="1">
+<O>
+<![CDATA[上级公司所属行政区域]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="4" s="2">
+<O t="DSColumn">
+<Attributes dsName="base_info_modify" columnName="a_r_of_sup_com"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Widget class="com.fr.form.ui.TextEditor">
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<TextAttr/>
+<Reg class="com.fr.form.ui.reg.NoneReg"/>
+<widgetValue/>
+<MobileScanCodeAttr scanCode="true"/>
+</Widget>
+<Expand dir="0"/>
+</C>
+<C c="0" r="5" s="1">
+<O>
+<![CDATA[公司代码]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="5" s="2">
+<O t="DSColumn">
+<Attributes dsName="base_info_modify" columnName="company_num"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="0" r="6" s="1">
+<O>
+<![CDATA[公司所属行政区域]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="6" s="2">
+<O t="DSColumn">
+<Attributes dsName="base_info_modify" columnName="a_r_of_company"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Widget class="com.fr.form.ui.TextEditor">
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<TextAttr/>
+<Reg class="com.fr.form.ui.reg.NoneReg"/>
+<widgetValue/>
+<MobileScanCodeAttr scanCode="true"/>
+</Widget>
+<Expand dir="0"/>
+</C>
+<C c="0" r="7" s="1">
+<O>
+<![CDATA[公司简称]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="7" s="2">
+<O t="DSColumn">
+<Attributes dsName="base_info_modify" columnName="company_abbreviation"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Widget class="com.fr.form.ui.TextEditor">
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<TextAttr/>
+<Reg class="com.fr.form.ui.reg.NoneReg"/>
+<widgetValue/>
+<MobileScanCodeAttr scanCode="true"/>
+</Widget>
+<Expand dir="0"/>
+</C>
+<C c="0" r="8" s="1">
+<O>
+<![CDATA[地址]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="8" s="2">
+<O t="DSColumn">
+<Attributes dsName="base_info_modify" columnName="address"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Widget class="com.fr.form.ui.TextEditor">
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<TextAttr/>
+<Reg class="com.fr.form.ui.reg.NoneReg"/>
+<widgetValue/>
+<MobileScanCodeAttr scanCode="true"/>
+</Widget>
+<Expand dir="0"/>
+</C>
+<C c="0" r="9" s="1">
+<O>
+<![CDATA[经度]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="9" s="2">
+<O t="DSColumn">
+<Attributes dsName="base_info_modify" columnName="longitude"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Widget class="com.fr.form.ui.TextEditor">
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<TextAttr/>
+<Reg class="com.fr.form.ui.reg.NoneReg"/>
+<widgetValue/>
+<MobileScanCodeAttr scanCode="true"/>
+</Widget>
+<Expand dir="0"/>
+</C>
+<C c="0" r="10" s="1">
+<O>
+<![CDATA[纬度]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="10" s="2">
+<O t="DSColumn">
+<Attributes dsName="base_info_modify" columnName="latitude"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Widget class="com.fr.form.ui.TextEditor">
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<TextAttr/>
+<Reg class="com.fr.form.ui.reg.NoneReg"/>
+<widgetValue/>
+<MobileScanCodeAttr scanCode="true"/>
+</Widget>
+<Expand dir="0"/>
+</C>
+<C c="0" r="11" s="1">
+<O>
+<![CDATA[公司简介]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="11" s="2">
+<O t="DSColumn">
+<Attributes dsName="base_info_modify" columnName="introduction"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Widget class="com.fr.form.ui.TextEditor">
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<TextAttr/>
+<Reg class="com.fr.form.ui.reg.NoneReg"/>
+<widgetValue/>
+<MobileScanCodeAttr scanCode="true"/>
+</Widget>
+<Expand dir="0"/>
+</C>
+<C c="0" r="12" s="1">
+<O>
+<![CDATA[运营情况]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="12" s="2">
+<O t="DSColumn">
+<Attributes dsName="base_info_modify" columnName="operational_status"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Widget class="com.fr.form.ui.ComboBox">
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<Dictionary class="com.fr.data.impl.DatabaseDictionary">
+<FormulaDictAttr kiName="operational_status_num" viName="operational_status"/>
+<DBDictAttr tableName="operational_status" schemaName="" ki="-1" vi="-1" kiName="operational_status_num" viName="operational_status"/>
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName>
+<![CDATA[dataview_demo]]></DatabaseName>
+</Connection>
+</Dictionary>
+<widgetValue/>
+</Widget>
+<Present class="com.fr.base.present.DictPresent">
+<Dictionary class="com.fr.data.impl.DatabaseDictionary">
+<FormulaDictAttr kiName="operational_status_num" viName="operational_status"/>
+<DBDictAttr tableName="operational_status" schemaName="" ki="-1" vi="-1" kiName="operational_status_num" viName="operational_status"/>
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName>
+<![CDATA[dataview_demo]]></DatabaseName>
+</Connection>
+</Dictionary>
+</Present>
+<Expand dir="0"/>
+</C>
+<C c="0" r="13" s="1">
+<O>
+<![CDATA[是否为重点关注煤矿]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="13" s="2">
+<O t="DSColumn">
+<Attributes dsName="base_info_modify" columnName="high_risk"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Widget class="com.fr.form.ui.ComboBox">
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<Dictionary class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="1" value="是"/>
+<Dict key="2" value="否"/>
+</CustomDictAttr>
+</Dictionary>
+<widgetValue/>
+</Widget>
+<Present class="com.fr.base.present.DictPresent">
+<Dictionary class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="1" value="是"/>
+<Dict key="2" value="否"/>
+</CustomDictAttr>
+</Dictionary>
+</Present>
+<Expand dir="0"/>
+</C>
+<C c="0" r="14" s="1">
+<O>
+<![CDATA[重点关注类型]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="14" s="2">
+<O t="DSColumn">
+<Attributes dsName="base_info_modify" columnName="high_risk_types"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Widget class="com.fr.form.ui.ComboBox">
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<Dictionary class="com.fr.data.impl.DatabaseDictionary">
+<FormulaDictAttr kiName="high_risk_types_num" viName="high_risk_types"/>
+<DBDictAttr tableName="high_risk_types" schemaName="" ki="-1" vi="-1" kiName="high_risk_types_num" viName="high_risk_types"/>
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName>
+<![CDATA[dataview_demo]]></DatabaseName>
+</Connection>
+</Dictionary>
+<widgetValue/>
+</Widget>
+<Present class="com.fr.base.present.DictPresent">
+<Dictionary class="com.fr.data.impl.DatabaseDictionary">
+<FormulaDictAttr kiName="high_risk_types_num" viName="high_risk_types"/>
+<DBDictAttr tableName="high_risk_types" schemaName="" ki="-1" vi="-1" kiName="high_risk_types_num" viName="high_risk_types"/>
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName>
+<![CDATA[dataview_demo]]></DatabaseName>
+</Connection>
+</Dictionary>
+</Present>
+<Expand dir="0"/>
+</C>
+<C c="0" r="15" s="1">
+<O>
+<![CDATA[煤矿类型]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="15" s="2">
+<O t="DSColumn">
+<Attributes dsName="base_info_modify" columnName="type_of_coal_mines"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Widget class="com.fr.form.ui.TextEditor">
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<TextAttr/>
+<Reg class="com.fr.form.ui.reg.NoneReg"/>
+<widgetValue/>
+<MobileScanCodeAttr scanCode="true"/>
+</Widget>
+<Expand dir="0"/>
+</C>
+<C c="0" r="16" s="1">
+<O>
+<![CDATA[煤矿属地]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="16" s="2">
+<O t="DSColumn">
+<Attributes dsName="base_info_modify" columnName="coal_mining_area"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Widget class="com.fr.form.ui.TextEditor">
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<TextAttr/>
+<Reg class="com.fr.form.ui.reg.NoneReg"/>
+<widgetValue/>
+<MobileScanCodeAttr scanCode="true"/>
+</Widget>
+<Expand dir="0"/>
+</C>
+<C c="0" r="17" s="1">
+<O>
+<![CDATA[核定产能]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="17" s="2">
+<O t="DSColumn">
+<Attributes dsName="base_info_modify" columnName="capacity"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Widget class="com.fr.form.ui.TextEditor">
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<TextAttr/>
+<Reg class="com.fr.form.ui.reg.NoneReg"/>
+<widgetValue/>
+<MobileScanCodeAttr scanCode="true"/>
+</Widget>
+<Expand dir="0"/>
+</C>
+<C c="0" r="18" s="1">
+<O>
+<![CDATA[瓦斯等级]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="18" s="2">
+<O t="DSColumn">
+<Attributes dsName="base_info_modify" columnName="gas_grade"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Widget class="com.fr.form.ui.ComboBox">
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<Dictionary class="com.fr.data.impl.DatabaseDictionary">
+<FormulaDictAttr kiName="gas_grade_num" viName="gas_grade"/>
+<DBDictAttr tableName="gas_grade" schemaName="" ki="-1" vi="-1" kiName="gas_grade_num" viName="gas_grade"/>
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName>
+<![CDATA[dataview_demo]]></DatabaseName>
+</Connection>
+</Dictionary>
+<widgetValue/>
+</Widget>
+<Present class="com.fr.base.present.DictPresent">
+<Dictionary class="com.fr.data.impl.DatabaseDictionary">
+<FormulaDictAttr kiName="gas_grade_num" viName="gas_grade"/>
+<DBDictAttr tableName="gas_grade" schemaName="" ki="-1" vi="-1" kiName="gas_grade_num" viName="gas_grade"/>
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName>
+<![CDATA[dataview_demo]]></DatabaseName>
+</Connection>
+</Dictionary>
+</Present>
+<Expand dir="0"/>
+</C>
+<C c="0" r="19" s="1">
+<O>
+<![CDATA[水文地址条件]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="19" s="2">
+<O t="DSColumn">
+<Attributes dsName="base_info_modify" columnName="hydrological_address_conditions"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Widget class="com.fr.form.ui.TextEditor">
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<TextAttr/>
+<Reg class="com.fr.form.ui.reg.NoneReg"/>
+<widgetValue/>
+<MobileScanCodeAttr scanCode="true"/>
+</Widget>
+<Expand dir="0"/>
+</C>
+<C c="0" r="20" s="1">
+<O>
+<![CDATA[提升方法]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="20" s="2">
+<O t="DSColumn">
+<Attributes dsName="base_info_modify" columnName="lifting_method"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Widget class="com.fr.form.ui.TextEditor">
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<TextAttr/>
+<Reg class="com.fr.form.ui.reg.NoneReg"/>
+<widgetValue/>
+<MobileScanCodeAttr scanCode="true"/>
+</Widget>
+<Expand dir="0"/>
+</C>
+<C c="0" r="21" s="1">
+<O>
+<![CDATA[安全生产标准化等级]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="21" s="2">
+<O t="DSColumn">
+<Attributes dsName="base_info_modify" columnName="safety_level"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Widget class="com.fr.form.ui.TextEditor">
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<TextAttr/>
+<Reg class="com.fr.form.ui.reg.NoneReg"/>
+<widgetValue/>
+<MobileScanCodeAttr scanCode="true"/>
+</Widget>
+<Expand dir="0"/>
+</C>
+<C c="0" r="22" s="1">
+<O>
+<![CDATA[员工人数]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="22" s="2">
+<O t="DSColumn">
+<Attributes dsName="base_info_modify" columnName="employees_num"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Widget class="com.fr.form.ui.TextEditor">
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<TextAttr/>
+<Reg class="com.fr.form.ui.reg.NoneReg"/>
+<widgetValue/>
+<MobileScanCodeAttr scanCode="true"/>
+</Widget>
+<Expand dir="0"/>
+</C>
+<C c="0" r="23" s="1">
+<O>
+<![CDATA[煤矿矿长]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="23" s="2">
+<O t="DSColumn">
+<Attributes dsName="base_info_modify" columnName="coal_miner"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Widget class="com.fr.form.ui.TextEditor">
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<TextAttr/>
+<Reg class="com.fr.form.ui.reg.NoneReg"/>
+<widgetValue/>
+<MobileScanCodeAttr scanCode="true"/>
+</Widget>
+<Expand dir="0"/>
+</C>
+<C c="0" r="24" s="1">
+<O>
+<![CDATA[生产矿长]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="24" s="2">
+<O t="DSColumn">
+<Attributes dsName="base_info_modify" columnName="production_miner"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Widget class="com.fr.form.ui.TextEditor">
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<TextAttr/>
+<Reg class="com.fr.form.ui.reg.NoneReg"/>
+<widgetValue/>
+<MobileScanCodeAttr scanCode="true"/>
+</Widget>
+<Expand dir="0"/>
+</C>
+<C c="0" r="25" s="1">
+<O>
+<![CDATA[安全矿长]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="25" s="2">
+<O t="DSColumn">
+<Attributes dsName="base_info_modify" columnName="safety_miner"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Widget class="com.fr.form.ui.TextEditor">
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<TextAttr/>
+<Reg class="com.fr.form.ui.reg.NoneReg"/>
+<widgetValue/>
+<MobileScanCodeAttr scanCode="true"/>
+</Widget>
+<Expand dir="0"/>
+</C>
+<C c="0" r="26" s="1">
+<O>
+<![CDATA[机电矿长]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="26" s="2">
+<O t="DSColumn">
+<Attributes dsName="base_info_modify" columnName="electromechanical_miner"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Widget class="com.fr.form.ui.TextEditor">
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<TextAttr/>
+<Reg class="com.fr.form.ui.reg.NoneReg"/>
+<widgetValue/>
+<MobileScanCodeAttr scanCode="true"/>
+</Widget>
+<Expand dir="0"/>
+</C>
+<C c="0" r="27" s="1">
+<O>
+<![CDATA[总工程师]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="27" s="2">
+<O t="DSColumn">
+<Attributes dsName="base_info_modify" columnName="chief_engineer"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Widget class="com.fr.form.ui.TextEditor">
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<TextAttr/>
+<Reg class="com.fr.form.ui.reg.NoneReg"/>
+<widgetValue/>
+<MobileScanCodeAttr scanCode="true"/>
+</Widget>
+<Expand dir="0"/>
+</C>
+<C c="0" r="28" s="1">
+<O>
+<![CDATA[通风队长]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="28" s="2">
+<O t="DSColumn">
+<Attributes dsName="base_info_modify" columnName="ventilation_captain"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Widget class="com.fr.form.ui.TextEditor">
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<TextAttr/>
+<Reg class="com.fr.form.ui.reg.NoneReg"/>
+<widgetValue/>
+<MobileScanCodeAttr scanCode="true"/>
+</Widget>
+<Expand dir="0"/>
+</C>
+</CellElementList>
+<ReportAttrSet>
+<ReportSettings isHorizontalCenterOnPage="true" headerHeight="0" footerHeight="0">
+<PaperSetting>
+<Margin top="986400" left="2743200" bottom="986400" right="2743200"/>
+</PaperSetting>
+<Background name="ColorBackground" color="-1"/>
+</ReportSettings>
+<Header reportPageType="0">
+<Background name="NullBackground"/>
+<LeftList/>
+<CenterList/>
+<RightList/>
+</Header>
+<Footer reportPageType="0">
+<Background name="NullBackground"/>
+<LeftList/>
+<CenterList/>
+<RightList/>
+</Footer>
+</ReportAttrSet>
+<ReportWriteAttr>
+<SubmitVisitor class="com.fr.report.write.BuiltInSQLSubmiter">
+<Name>
+<![CDATA[更新]]></Name>
+<Attributes dsName="dataview_demo"/>
+<DMLConfig class="com.fr.write.config.UpdateConfig">
+<Table schema="" name="base_info"/>
+<ColumnConfig name="company_name" isKey="true" skipUnmodified="false">
+<ColumnRow column="1" row="2"/>
+</ColumnConfig>
+<ColumnConfig name="company_num" isKey="false" skipUnmodified="false">
+<ColumnRow column="1" row="5"/>
+</ColumnConfig>
+<ColumnConfig name="a_r_of_company" isKey="false" skipUnmodified="false">
+<ColumnRow column="1" row="6"/>
+</ColumnConfig>
+<ColumnConfig name="company_abbreviation" isKey="false" skipUnmodified="false">
+<ColumnRow column="1" row="7"/>
+</ColumnConfig>
+<ColumnConfig name="name_sup_com" isKey="false" skipUnmodified="false">
+<ColumnRow column="1" row="3"/>
+</ColumnConfig>
+<ColumnConfig name="a_r_of_sup_com" isKey="false" skipUnmodified="false">
+<ColumnRow column="1" row="4"/>
+</ColumnConfig>
+<ColumnConfig name="address" isKey="false" skipUnmodified="false">
+<ColumnRow column="1" row="8"/>
+</ColumnConfig>
+<ColumnConfig name="longitude" isKey="false" skipUnmodified="false">
+<ColumnRow column="1" row="9"/>
+</ColumnConfig>
+<ColumnConfig name="latitude" isKey="false" skipUnmodified="false">
+<ColumnRow column="1" row="10"/>
+</ColumnConfig>
+<ColumnConfig name="introduction" isKey="false" skipUnmodified="false">
+<ColumnRow column="1" row="11"/>
+</ColumnConfig>
+<ColumnConfig name="operational_status" isKey="false" skipUnmodified="false">
+<ColumnRow column="1" row="12"/>
+</ColumnConfig>
+<ColumnConfig name="high_risk" isKey="false" skipUnmodified="false">
+<ColumnRow column="1" row="13"/>
+</ColumnConfig>
+<ColumnConfig name="high_risk_types" isKey="false" skipUnmodified="false">
+<ColumnRow column="1" row="14"/>
+</ColumnConfig>
+<ColumnConfig name="type_of_coal_mines" isKey="false" skipUnmodified="false">
+<ColumnRow column="1" row="15"/>
+</ColumnConfig>
+<ColumnConfig name="coal_mining_area" isKey="false" skipUnmodified="false">
+<ColumnRow column="1" row="16"/>
+</ColumnConfig>
+<ColumnConfig name="capacity" isKey="false" skipUnmodified="false">
+<ColumnRow column="1" row="17"/>
+</ColumnConfig>
+<ColumnConfig name="gas_grade" isKey="false" skipUnmodified="false">
+<ColumnRow column="1" row="18"/>
+</ColumnConfig>
+<ColumnConfig name="hydrological_address_conditions" isKey="false" skipUnmodified="false">
+<ColumnRow column="1" row="19"/>
+</ColumnConfig>
+<ColumnConfig name="lifting_method" isKey="false" skipUnmodified="false">
+<ColumnRow column="1" row="20"/>
+</ColumnConfig>
+<ColumnConfig name="safety_level" isKey="false" skipUnmodified="false">
+<ColumnRow column="1" row="21"/>
+</ColumnConfig>
+<ColumnConfig name="employees_num" isKey="false" skipUnmodified="false">
+<ColumnRow column="1" row="22"/>
+</ColumnConfig>
+<ColumnConfig name="coal_miner" isKey="false" skipUnmodified="false">
+<ColumnRow column="1" row="23"/>
+</ColumnConfig>
+<ColumnConfig name="production_miner" isKey="false" skipUnmodified="false">
+<ColumnRow column="1" row="24"/>
+</ColumnConfig>
+<ColumnConfig name="safety_miner" isKey="false" skipUnmodified="false">
+<ColumnRow column="1" row="25"/>
+</ColumnConfig>
+<ColumnConfig name="electromechanical_miner" isKey="false" skipUnmodified="false">
+<ColumnRow column="1" row="26"/>
+</ColumnConfig>
+<ColumnConfig name="chief_engineer" isKey="false" skipUnmodified="false">
+<ColumnRow column="1" row="27"/>
+</ColumnConfig>
+<ColumnConfig name="ventilation_captain" isKey="false" skipUnmodified="false">
+<ColumnRow column="1" row="28"/>
+</ColumnConfig>
+<ColumnConfig name="user" isKey="false" skipUnmodified="false">
+<O t="XMLable" class="com.fr.base.Formula">
+<Attributes>
+<![CDATA[=$fine_username]]></Attributes>
+</O>
+</ColumnConfig>
+<ColumnConfig name="modi_time" isKey="false" skipUnmodified="false">
+<O t="XMLable" class="com.fr.base.Formula">
+<Attributes>
+<![CDATA[=NOW()]]></Attributes>
+</O>
+</ColumnConfig>
+<Condition class="com.fr.data.condition.ListCondition"/>
+</DMLConfig>
+</SubmitVisitor>
+</ReportWriteAttr>
+<PrivilegeControl/>
+</Report>
+<ReportParameterAttr>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="1" align="0" useParamsTemplate="true"/>
+<PWTitle>
+<![CDATA[参数]]></PWTitle>
+</ReportParameterAttr>
+<StyleList>
+<Style horizontal_alignment="0" imageLayout="1">
+<FRFont name="微软雅黑" style="1" size="120"/>
+<Background name="NullBackground"/>
+<Border/>
+</Style>
+<Style horizontal_alignment="0" imageLayout="1">
+<FRFont name="微软雅黑" style="1" size="96"/>
+<Background name="NullBackground"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
+</Border>
+</Style>
+<Style horizontal_alignment="2" imageLayout="1">
+<FRFont name="微软雅黑" style="0" size="96"/>
+<Background name="NullBackground"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
+</Border>
+</Style>
+</StyleList>
+<DesignerVersion DesignerVersion="KAA"/>
+<PreviewType PreviewType="1"/>
+<TemplateIdAttMark class="com.fr.base.iofile.attr.TemplateIdAttrMark">
+<TemplateIdAttMark TemplateId="c9d8ce79-8528-4ec2-b716-13edbf769c5e"/>
+</TemplateIdAttMark>
+</WorkBook>
