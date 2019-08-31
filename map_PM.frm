@@ -1570,14 +1570,14 @@ if(window.flag){
 </C>
 <C c="0" r="11">
 <O t="DSColumn">
-<Attributes dsName="now_data" columnName="company_num"/>
+<Attributes dsName="data_for_the_same_period" columnName="company_num"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
 <Attr divideMode="1"/>
 </RG>
 <Result>
-<![CDATA[='当年']]></Result>
+<![CDATA[='同期']]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
@@ -1587,7 +1587,7 @@ if(window.flag){
 </C>
 <C c="1" r="11">
 <O t="DSColumn">
-<Attributes dsName="now_data" columnName="month_sales"/>
+<Attributes dsName="data_for_the_same_period" columnName="month_sales"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
@@ -1602,7 +1602,7 @@ if(window.flag){
 </C>
 <C c="2" r="11">
 <O t="DSColumn">
-<Attributes dsName="now_data" columnName="month_sales"/>
+<Attributes dsName="data_for_the_same_period" columnName="month_sales"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
@@ -1617,7 +1617,7 @@ if(window.flag){
 </C>
 <C c="3" r="11">
 <O t="DSColumn">
-<Attributes dsName="now_data" columnName="month_coal_footage"/>
+<Attributes dsName="data_for_the_same_period" columnName="month_coal_footage"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
@@ -1632,7 +1632,7 @@ if(window.flag){
 </C>
 <C c="4" r="11">
 <O t="DSColumn">
-<Attributes dsName="now_data" columnName="date"/>
+<Attributes dsName="data_for_the_same_period" columnName="date"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
@@ -1653,14 +1653,14 @@ if(window.flag){
 </C>
 <C c="0" r="12">
 <O t="DSColumn">
-<Attributes dsName="data_for_the_same_period" columnName="company_num"/>
+<Attributes dsName="now_data" columnName="company_num"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
 <Attr divideMode="1"/>
 </RG>
 <Result>
-<![CDATA[='同期']]></Result>
+<![CDATA[='当年']]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
@@ -1670,7 +1670,7 @@ if(window.flag){
 </C>
 <C c="1" r="12">
 <O t="DSColumn">
-<Attributes dsName="data_for_the_same_period" columnName="month_sales"/>
+<Attributes dsName="now_data" columnName="month_sales"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
@@ -1685,7 +1685,7 @@ if(window.flag){
 </C>
 <C c="2" r="12">
 <O t="DSColumn">
-<Attributes dsName="data_for_the_same_period" columnName="month_sales"/>
+<Attributes dsName="now_data" columnName="month_sales"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
@@ -1700,7 +1700,7 @@ if(window.flag){
 </C>
 <C c="3" r="12">
 <O t="DSColumn">
-<Attributes dsName="data_for_the_same_period" columnName="month_coal_footage"/>
+<Attributes dsName="now_data" columnName="month_coal_footage"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
@@ -1715,7 +1715,7 @@ if(window.flag){
 </C>
 <C c="4" r="12">
 <O t="DSColumn">
-<Attributes dsName="data_for_the_same_period" columnName="date"/>
+<Attributes dsName="now_data" columnName="date"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
@@ -1729,42 +1729,6 @@ if(window.flag){
 <Expand dir="0"/>
 </C>
 <C c="8" r="12">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="0" r="13">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="1" r="13">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="2" r="13">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="3" r="13">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="6" r="13">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="7" r="13">
 <PrivilegeControl/>
 <CellGUIAttr adjustmode="1"/>
 <CellPageAttr/>
@@ -2239,7 +2203,7 @@ if(window.flag){
 <![CDATA[=E12:E13]]></Attributes>
 </O>
 </Category>
-<Top topCate="-1" topValue="-1" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
+<Top topCate="-1" topValue="-1" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="true" isDiscardNullSeries="false"/>
 </NormalReportDataDefinition>
 </ChartDefinition>
 </Chart>
@@ -7652,7 +7616,7 @@ F5ZS-l//E[l-X!\C9k+Q!5Rt'e+I18c?(-2L3d8=:[Q4,*.4kQ%l+WCkj*L1([bE2`+~
 <ElementCaseMobileAttrProvider horizontal="1" vertical="0" zoom="true" refresh="false" isUseHTML="false" isMobileCanvasSize="false" appearRefresh="false" allowFullScreen="false"/>
 </body>
 </InnerWidget>
-<BoundsAttr x="611" y="0" width="778" height="778"/>
+<BoundsAttr x="550" y="0" width="700" height="700"/>
 </Widget>
 <Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
 <InnerWidget class="com.fr.form.ui.container.WTitleLayout">
@@ -9271,7 +9235,7 @@ city.setValue(newpid)]]></Content>
 <ChartMobileAttrProvider zoomOut="0" zoomIn="2" allowFullScreen="true"/>
 </body>
 </InnerWidget>
-<BoundsAttr x="0" y="0" width="611" height="778"/>
+<BoundsAttr x="0" y="0" width="550" height="700"/>
 </Widget>
 <Sorted sorted="false"/>
 <MobileWidgetList>
@@ -9279,7 +9243,7 @@ city.setValue(newpid)]]></Content>
 <Widget widgetName="report0"/>
 </MobileWidgetList>
 <WidgetScalingAttr compState="0"/>
-<DesignResolution absoluteResolutionScaleW="1600" absoluteResolutionScaleH="900"/>
+<DesignResolution absoluteResolutionScaleW="1366" absoluteResolutionScaleH="768"/>
 <AppRelayout appRelayout="true"/>
 </InnerWidget>
 <BoundsAttr x="0" y="0" width="1364" height="766"/>
@@ -9291,7 +9255,7 @@ city.setValue(newpid)]]></Content>
 <WidgetZoomAttr compState="0"/>
 <AppRelayout appRelayout="true"/>
 <Size width="1364" height="766"/>
-<ResolutionScalingAttr percent="1.0"/>
+<ResolutionScalingAttr percent="0.9"/>
 <BodyLayoutType type="1"/>
 </Center>
 </Layout>
